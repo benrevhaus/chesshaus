@@ -9,7 +9,7 @@ The chessboard metaphor maps AI leverage across business functions across 15 sli
 
 1. Push this repository to GitHub
 2. Go to **Settings → Pages**
-3. Under **Source**, select your branch (`main`) and folder: `/docs`
+3. Under **Source**, select your branch and folder: `/ (root)`
 4. Save. Your deck will be live at `https://<your-org>.github.io/<repo>/`
 
 ---
@@ -17,7 +17,6 @@ The chessboard metaphor maps AI leverage across business functions across 15 sli
 ## Local Preview
 
 ```bash
-cd docs
 python3 -m http.server 8000
 ```
 
@@ -55,8 +54,7 @@ Hover any chess piece to see which business function it represents.
 ```
 /
 ├── README.md
-└── docs/
-    ├── index.html   — HTML shell
-    ├── styles.css   — Design system, layout, board, animations
-    └── app.js       — Piece data, slide data, render logic, keyboard events
+├── index.html   — HTML shell
+├── styles.css   — Design system, layout, board, animations
+└── app.js       — Piece data, slide data, render logic, keyboard events
 ```
