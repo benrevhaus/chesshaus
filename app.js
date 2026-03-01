@@ -168,7 +168,7 @@ const SLIDES = [
   {
     headline: 'The Sprint: Focused, Measured, Not Experimental',
     bullets: [
-      '60 days. Three departments. Clear deliverables.',
+      '60 days. Everyone participates. Clear deliverables.',
       'This is not a pilot. It\'s a lever.',
     ],
     notes: 'The 60-day sprint isn\'t about installing tools.\nIt\'s about installing queens — responsibly.\nWe build capability.\nWe build repeatable workflows.\nWe build fallback paths.\nThe system runs clean even if tools change or fail.',
@@ -179,6 +179,7 @@ const SLIDES = [
     bullets: [
       'Marketing: content velocity and targeting precision',
       'Customer Service: response time and resolution rate',
+      'Fulfillment: fees, speed, tech',
     ],
     notes: 'We focus on the highest-leverage files first.\nMarketing. Customer service. Tech/product throughput.\nWe enable early adopters deeply.\nWe audit tech spend.\nWe capture and systematize critical workflows.\nThen we propagate what works.',
     board: B10,
