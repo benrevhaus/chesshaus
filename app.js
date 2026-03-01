@@ -27,6 +27,7 @@ const PIECES = {
   PAWN_SA: { svg: 'wP.svg', tooltip: 'Pawn = Sales' },
   PAWN_HR: { svg: 'wP.svg', tooltip: 'Pawn = HR / People' },
   PAWN_OP: { svg: 'wP.svg', tooltip: 'Pawn = Operations' },
+  QUEEN_FUT: { svg: 'wQ.svg', tooltip: 'Queen = AI-enabled department (future state)' },
 };
 
 // ── Shared board snapshots ───────────────────────────────────
@@ -52,18 +53,25 @@ const B10 = (({ f5, ...rest }) => ({ ...rest, f8: 'QUEEN2' }))(B9);
 
 const B14 = (({ b5, d5, ...rest }) => ({ ...rest, b8: 'QUEEN3', d8: 'QUEEN4' }))(B10);
 
-// Back rank setup: King d8, Rooks a8+h8, Bishops c8+f8, Knights b8+g8, 8 pawns on rank 6
+// Back rank setup: King e8 (center), Rooks a8+h8, Bishops c8+f8, Knights b8+g8, 8 pawns on rank 7
 const BSETUP = {
-  d8: 'KING',
+  e8: 'KING',
   a8: 'ROOK',   h8: 'ROOK',
   c8: 'BISHOP', f8: 'BISHOP',
   b8: 'KNIGHT', g8: 'KNIGHT',
-  a6: 'PAWN_M', b6: 'PAWN_C', c6: 'PAWN_P', d6: 'PAWN_T',
-  e6: 'PAWN_F', f6: 'PAWN_SA', g6: 'PAWN_HR', h6: 'PAWN_OP',
+  a7: 'PAWN_M', b7: 'PAWN_C', c7: 'PAWN_P', d7: 'PAWN_T',
+  e7: 'PAWN_F', f7: 'PAWN_SA', g7: 'PAWN_HR', h7: 'PAWN_OP',
 };
 
-// Same setup with Queen entering at e8
-const BSETUPQ = { ...BSETUP, e8: 'QUEEN' };
+// Same setup with Queen entering at d8
+const BSETUPQ = { ...BSETUP, d8: 'QUEEN' };
+
+// Future state: all departments have become queens (rank 6)
+const BSETUPFUTURE = {
+  ...BSETUPQ,
+  a6: 'QUEEN_FUT', b6: 'QUEEN_FUT', c6: 'QUEEN_FUT', d6: 'QUEEN_FUT',
+  e6: 'QUEEN_FUT', f6: 'QUEEN_FUT', g6: 'QUEEN_FUT', h6: 'QUEEN_FUT',
+};
 
 // ── Slide data ───────────────────────────────────────────────
 const SLIDES = [
@@ -208,17 +216,26 @@ const SLIDES = [
       'Back rank anchored — King, Rooks, Bishops, Knights in place',
       'Eight departments advance together — one gap remains',
     ],
-    notes: 'This is the full organizational board.\nEvery structural piece is placed. Every department is in motion.\nThe back rank is anchored — King at D8, Rooks, Bishops, Knights locked in.\nEight departments advance in formation along rank 6.\nBut look at the center. E8 is empty.\nThe most powerful piece has yet to arrive.',
+    notes: 'This is the full organizational board.\nEvery structural piece is placed. Every department is in motion.\nThe back rank is anchored — King at E8, Rooks, Bishops, Knights locked in.\nEight departments advance in formation along rank 7.\nBut look at D8. It\'s empty.\nThe most powerful piece has yet to arrive.',
     board: BSETUP,
   },
   {
-    headline: 'The Queen Enters: E8',
+    headline: 'The Queen Enters: D8',
     bullets: [
-      'AI takes the center of the back rank',
+      'AI takes its place on the back rank',
       'Every piece now has full leverage behind it',
     ],
-    notes: 'The queen enters at E8.\nCenter of the back rank. Maximum reach in every direction.\nThis is what a fully activated board looks like.\nAI behind the formation — not replacing the pieces,\nbut multiplying what every piece can do.\nThe system is complete.',
+    notes: 'The queen enters at D8.\nAlongside the King. Maximum reach in every direction.\nThis is what a fully activated board looks like.\nAI behind the formation — not replacing the pieces,\nbut multiplying what every piece can do.\nThe system is complete.',
     board: BSETUPQ,
+  },
+  {
+    headline: 'The Future: Every Department a Queen',
+    bullets: [
+      'Eight departments — fully AI-enabled',
+      'The whole board moves with queen-range leverage',
+    ],
+    notes: 'This is where we\'re headed.\nNot one queen. Not three.\nEvery department AI-enabled — moving with full range.\nMarketing. Customer Service. Product. Tech. Fulfillment. Sales. HR. Operations.\nAll eight.\nThis is the board we\'re building toward.',
+    board: BSETUPFUTURE,
   },
 ];
 
