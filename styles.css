@@ -175,6 +175,7 @@ body.presenter #speaker-notes {
   color: var(--charcoal);
   opacity: 0.8;
   line-height: 1.65;
+  white-space: pre-line;
 }
 
 /* ── Progress ───────────────────────────────────────────── */

@@ -56,7 +56,7 @@ const SLIDES = [
       'Every business is a system of moving parts',
       'Chess reveals structure, constraint, and leverage',
     ],
-    notes: 'Start here. The board is empty — intentionally. We\'re not drawing an org chart. We\'re mapping a system. The power of chess as a metaphor is that every piece has a defined role, defined movement, and defined constraints. That\'s your company too. Give it a beat. Let the silence work.',
+    notes: 'I want to show you how I see the company right now — structurally.\nNot departmentally. Not emotionally. Structurally.\nThis is the board.',
     board: B0,
   },
   {
@@ -65,7 +65,7 @@ const SLIDES = [
       'Most important piece on the board',
       'Most constrained — one square at a time',
     ],
-    notes: 'The CEO is indispensable — and that\'s also the risk. The King can\'t be lost, so it\'s protected. But that protection costs mobility. Every dollar of capital allocation, every strategic decision, routes through this piece. The constraint isn\'t weakness — it\'s by design. The question is: are the other pieces giving it room to move?',
+    notes: 'Every system has a center of gravity.\nIn our case, that\'s you.\nVision. Capital allocation. Risk tolerance. Boundary pushing.\nThe company organizes around that.\nThe king must be protected — not from risk — but from chaos.',
     board: B2,
   },
   {
@@ -74,7 +74,7 @@ const SLIDES = [
       'Marketing, Customer Service, Product, Tech, Fulfillment',
       'Each moves well — in its lane',
     ],
-    notes: 'Pawns get a bad reputation. But in your business, these are real teams doing real work. The constraint isn\'t skill — it\'s mobility. A pawn moves forward, one square at a time. It can\'t reach back. It can\'t jump. It can\'t cross files. Your departments are the same: capable within their function, limited across it. Hover each piece to see which department it represents.',
+    notes: 'These are the departments.\nMarketing. Customer service. Product. Tech. Fulfillment.\nThey create forward motion. They execute. They carry output.\nThey\'re capable — but their mobility is limited, especially when work is repetitive, fragmented, or context-heavy.',
     board: B3,
   },
   {
@@ -83,7 +83,7 @@ const SLIDES = [
       'The Bishop sees patterns others miss',
       'Diagonal reach = cross-functional financial insight',
     ],
-    notes: 'The Bishop moves diagonally — it never travels the same file as the King or the pawns. That\'s your finance function: it doesn\'t operate in the same lanes, but it sees across them. Pattern recognition. Margin trends. Where cash is burning before the P&L catches up. This is the piece that gives the King strategic sight.',
+    notes: 'This is financial visibility.\nCAC. Contribution margin. EBITDA. Spend velocity.\nThis gives us diagonal sight across the board.\nWithout it, we guess.\nWith it, we compound.',
     board: B4,
   },
   {
@@ -92,7 +92,7 @@ const SLIDES = [
       'The Rook moves in straight lines — fast, far, unobstructed',
       'Systems and process are the open files',
     ],
-    notes: 'A Rook on an open file is one of the most powerful positions in chess. It\'s not the piece itself — it\'s the cleared path. Your operational systems are the same. Process, tooling, clear ownership: these don\'t make the Rook stronger, they clear the board so it can move. Structure isn\'t bureaucracy. It\'s friction removal.',
+    notes: 'This is where I operate best.\nLong-range structure. Open files. System stabilization.\nNot flashy. Not reactive.\nI create inevitability.',
     board: B5,
   },
   {
@@ -101,7 +101,7 @@ const SLIDES = [
       'Knights jump — they don\'t follow straight lines',
       'Useful, but unpredictable in a structured system',
     ],
-    notes: 'Knights are the most unusual pieces on the board. They jump over other pieces. They move in an L — two squares one direction, one square perpendicular. In your organization, these are legacy behaviors: workarounds, tribal knowledge, processes that predate the current structure. They\'re not bad. They\'re often clever. But they move differently from everything else, and that creates coordination friction.',
+    notes: 'These are legacy behaviors.\nFragmented systems. Manual work. Cultural resistance. Context switching.\nNot bad — just nonlinear.\nIf we don\'t design around them, they create unpredictability.',
     board: B6,
   },
   {
@@ -110,7 +110,7 @@ const SLIDES = [
       'Every piece is accounted for — except one',
       'No piece has unrestricted cross-board movement',
     ],
-    notes: 'Pause here. Let the board breathe. Count the pieces. Ask the room: what\'s missing? Don\'t answer it yet. The absence is the point. Every piece on this board moves within constraints. Nothing crosses the board in a single turn. Nothing operates across every file and rank simultaneously. Name that gap before you fill it.',
+    notes: 'Now look at the board.\nSomething is missing.\nWe don\'t have cross-board mobility.\nWe don\'t have time compression.\nWe don\'t have scalable unblocking.',
     board: B6,
   },
   {
@@ -119,7 +119,7 @@ const SLIDES = [
       'Every other piece compensates for the missing range',
       'The whole system works harder to cover the gap',
     ],
-    notes: 'This is the business right now. Without a piece that moves everywhere, all the other pieces have to work overtime to compensate. Marketing tries to cover CS gaps. Product tries to cover tech debt. The King makes operational decisions it shouldn\'t need to touch. Everyone is doing their job plus part of someone else\'s. That\'s not a performance problem — it\'s a structural one.',
+    notes: 'There\'s no queen.\nWhen there\'s no queen, two things happen:\nThe rook stretches too far.\nOr the king overextends.\nThat\'s where bottlenecks form.\nThat\'s where cost creeps in.\nThat\'s where clarity degrades.',
     board: B6,
   },
   {
@@ -128,7 +128,7 @@ const SLIDES = [
       'Moves any direction, any distance, in a single turn',
       'Amplifies every piece it works beside',
     ],
-    notes: 'The Queen is the most powerful piece in chess — not because it\'s special on its own, but because of what it enables. It protects the King, supports the Rooks, opens lines for the Bishops. AI is the same. It doesn\'t replace your departments. It amplifies them. It handles the cross-board moves no single function can make alone. 24 hours a day.',
+    notes: 'AI is the queen.\nHigh mobility. Cross-functional. 24/7.\nBut we use AI as leverage without creating dependency.\nWe design for continuity — not fragility.',
     board: B9,
   },
   {
@@ -137,7 +137,7 @@ const SLIDES = [
       'Fulfillment pawn reaches the back rank',
       'Transforms into a Queen — same team, new mobility',
     ],
-    notes: 'When a pawn reaches the opposite back rank, it promotes — usually to a Queen. That\'s not a replacement. It\'s an upgrade. The same Fulfillment function, now with AI embedded, suddenly has cross-board range. It can see across the order pipeline, flag anomalies, surface patterns. The team didn\'t change. Its mobility did.',
+    notes: 'Pawns promote.\nWhen departments learn to use AI well, they don\'t move one square at a time.\nThey generate queen-level leverage inside their own function.\nThat\'s where speed comes from.\nThat\'s where margin comes from.\nThat\'s where category separation begins.',
     board: B10,
   },
   {
@@ -146,7 +146,7 @@ const SLIDES = [
       '60 days. Three departments. Clear deliverables.',
       'This is not a pilot. It\'s a lever.',
     ],
-    notes: 'Pilots are open-ended. This isn\'t. A sprint has a start, a finish, and defined outputs. 60 days. Three targeted functions. Measurable baselines before we start. We\'re not asking: does AI work? We\'re proving: what specifically does it unlock here. The difference matters for your board, your team, and your next capital decision.',
+    notes: 'The 60-day sprint isn\'t about installing tools.\nIt\'s about installing queens — responsibly.\nWe build capability.\nWe build repeatable workflows.\nWe build fallback paths.\nThe system runs clean even if tools change or fail.',
     board: B10,
   },
   {
@@ -155,7 +155,7 @@ const SLIDES = [
       'Marketing: content velocity and targeting precision',
       'Customer Service: response time and resolution rate',
     ],
-    notes: 'We selected these three because they share a common profile: high volume, high repetition, measurable output. Marketing generates content at a pace humans can\'t sustain alone. CS handles inquiry volume that scales non-linearly with growth. Tech carries the weight of documentation, code review, and deployment friction. Each one has a baseline we can measure today and a target we can hit in 60 days.',
+    notes: 'We focus on the highest-leverage files first.\nMarketing. Customer service. Tech/product throughput.\nWe enable early adopters deeply.\nWe audit tech spend.\nWe capture and systematize critical workflows.\nThen we propagate what works.',
     board: B10,
   },
   {
@@ -164,7 +164,7 @@ const SLIDES = [
       'Real data: where to double down, where to address',
       'A decision-ready board — not a hypothesis',
     ],
-    notes: 'At day 60, you have something no pilot gives you: operational data from your actual company. Not a benchmark. Not an industry average. Your Marketing team\'s content output. Your CS team\'s resolution curve. Your Tech team\'s deployment cadence. You\'ll know exactly where AI compounded and where it surfaced underlying structural issues. That\'s the decision you make with confidence — not faith.',
+    notes: 'By Day 60, we\'ll have measurable proof.\nReal adoption.\nReal shipped micro-systems.\nClear visibility into friction.\nWe\'ll know where leverage compounds —\nand where resistance lives.\nAnd we\'ll tie it directly to margin and velocity.',
     board: B10,
   },
   {
@@ -173,7 +173,7 @@ const SLIDES = [
       'Three departments now move with queen-range',
       'Velocity and cost compress simultaneously',
     ],
-    notes: 'Two queens promoting at once. CS and Tech get the same mobility upgrade Fulfillment did. This is the compounding effect. Velocity increases while OPEX compresses — that\'s not a tradeoff, it\'s a structural shift. The board looks different now. Not because you added headcount. Because you changed how far each piece can move in a single turn.',
+    notes: 'If we do this right, the board changes.\nVelocity increases.\nOPEX compresses.\nBottlenecks reduce.\nDecisions get clearer.\nWe don\'t just move faster.\nWe build a system that keeps moving.',
     board: B14,
   },
   {
@@ -182,7 +182,7 @@ const SLIDES = [
       'The pieces don\'t go back to pawns',
       'The question is: which file are you on in 60 days?',
     ],
-    notes: 'In chess, a promoted queen stays a queen. The pawn doesn\'t revert. This is the same. AI-embedded functions don\'t go back to operating manually. The question you\'re deciding today isn\'t "should we try AI." It\'s "where do we want to be when the board is set?" The sprint gives you that position. [Pause. Let it land.]',
+    notes: 'This isn\'t a title conversation.\nIt\'s a structural leverage conversation.\nThe sprint is a contained experiment to see if we can manufacture queens — with continuity built in.\nIf we can,\nthe board changes permanently.',
     board: B14,
   },
 ];
