@@ -58,8 +58,8 @@ const BSETUP = {
   a8: 'ROOK',   h8: 'ROOK',
   c8: 'BISHOP', f8: 'BISHOP',
   b8: 'KNIGHT', g8: 'KNIGHT',
-  a6: 'PAWN_M', b6: 'PAWN_C', c6: 'PAWN_P', d6: 'PAWN_T',
-  e6: 'PAWN_F', f6: 'PAWN_SA', g6: 'PAWN_HR', h6: 'PAWN_OP',
+  a7: 'PAWN_M', b7: 'PAWN_C', c7: 'PAWN_P', d7: 'PAWN_T',
+  e7: 'PAWN_F', f7: 'PAWN_SA', g7: 'PAWN_HR', h7: 'PAWN_OP',
 };
 
 // Same setup with Queen entering at e8
@@ -208,7 +208,7 @@ const SLIDES = [
       'Back rank anchored — King, Rooks, Bishops, Knights in place',
       'Eight departments advance together — one gap remains',
     ],
-    notes: 'This is the full organizational board.\nEvery structural piece is placed. Every department is in motion.\nThe back rank is anchored — King at D8, Rooks, Bishops, Knights locked in.\nEight departments advance in formation along rank 6.\nBut look at the center. E8 is empty.\nThe most powerful piece has yet to arrive.',
+    notes: 'This is the full organizational board.\nEvery structural piece is placed. Every department is in motion.\nThe back rank is anchored — King at D8, Rooks, Bishops, Knights locked in.\nEight departments advance in formation along rank 7.\nBut look at the center. E8 is empty.\nThe most powerful piece has yet to arrive.',
     board: BSETUP,
   },
   {
