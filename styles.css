@@ -79,12 +79,22 @@ body.presenter #app {
 /* ── Pieces ─────────────────────────────────────────────── */
 
 .piece {
-  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   cursor: default;
-  color: var(--charcoal);
   user-select: none;
   position: relative;
-  line-height: 1;
+}
+
+.piece-img {
+  width: 82%;
+  height: 82%;
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));
 }
 
 /* Tooltip */
@@ -221,10 +231,6 @@ body.presenter #speaker-notes {
   #chessboard {
     width: 320px;
     height: 320px;
-  }
-
-  .piece {
-    font-size: 1.6rem;
   }
 
   #content-panel {

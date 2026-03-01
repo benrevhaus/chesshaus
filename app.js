@@ -9,20 +9,21 @@ if (params.get('presenter') === '1') {
 }
 
 // ── Piece definitions ────────────────────────────────────────
+// Cburnett SVG piece set — CC BY-SA 4.0, Colin M.L. Burnett / lichess-org
 const PIECES = {
-  KING:   { glyph: '♔', tooltip: 'King = CEO / Vision & Capital Allocation' },
-  QUEEN:  { glyph: '♕', tooltip: 'Queen = AI / Cross-functional Leverage' },
-  ROOK:   { glyph: '♖', tooltip: 'Rook = Structure / System Stabilization' },
-  BISHOP: { glyph: '♗', tooltip: 'Bishop = Financial Visibility / Pattern Recognition' },
-  KNIGHT: { glyph: '♘', tooltip: 'Knight = Legacy Behaviors / Cultural Resistance' },
-  PAWN_M: { glyph: '♙', tooltip: 'Pawn = Marketing' },
-  PAWN_C: { glyph: '♙', tooltip: 'Pawn = Customer Service' },
-  PAWN_P: { glyph: '♙', tooltip: 'Pawn = Product' },
-  PAWN_T: { glyph: '♙', tooltip: 'Pawn = Tech' },
-  PAWN_F: { glyph: '♙', tooltip: 'Pawn = Fulfillment (promoting)' },
-  QUEEN2: { glyph: '♕', tooltip: 'Queen = AI inside Fulfillment (promoted)' },
-  QUEEN3: { glyph: '♕', tooltip: 'Queen = AI inside Customer Service (promoted)' },
-  QUEEN4: { glyph: '♕', tooltip: 'Queen = AI inside Tech (promoted)' },
+  KING:   { svg: 'wK.svg', tooltip: 'King = CEO / Vision & Capital Allocation' },
+  QUEEN:  { svg: 'wQ.svg', tooltip: 'Queen = AI / Cross-functional Leverage' },
+  ROOK:   { svg: 'wR.svg', tooltip: 'Rook = Structure / System Stabilization' },
+  BISHOP: { svg: 'wB.svg', tooltip: 'Bishop = Financial Visibility / Pattern Recognition' },
+  KNIGHT: { svg: 'wN.svg', tooltip: 'Knight = Legacy Behaviors / Cultural Resistance' },
+  PAWN_M: { svg: 'wP.svg', tooltip: 'Pawn = Marketing' },
+  PAWN_C: { svg: 'wP.svg', tooltip: 'Pawn = Customer Service' },
+  PAWN_P: { svg: 'wP.svg', tooltip: 'Pawn = Product' },
+  PAWN_T: { svg: 'wP.svg', tooltip: 'Pawn = Tech' },
+  PAWN_F: { svg: 'wP.svg', tooltip: 'Pawn = Fulfillment (promoting)' },
+  QUEEN2: { svg: 'wQ.svg', tooltip: 'Queen = AI inside Fulfillment (promoted)' },
+  QUEEN3: { svg: 'wQ.svg', tooltip: 'Queen = AI inside Customer Service (promoted)' },
+  QUEEN4: { svg: 'wQ.svg', tooltip: 'Queen = AI inside Tech (promoted)' },
 };
 
 // ── Shared board snapshots ───────────────────────────────────
@@ -265,8 +266,12 @@ function renderPieces(board) {
     cell.innerHTML = '';
     const el = document.createElement('span');
     el.className = 'piece entering';
-    el.textContent = piece.glyph;
     el.setAttribute('data-tooltip', piece.tooltip);
+    const img = document.createElement('img');
+    img.src = `pieces/${piece.svg}`;
+    img.alt = pieceKey;
+    img.className = 'piece-img';
+    el.appendChild(img);
     // Remove entering class after animation completes
     el.addEventListener('animationend', () => el.classList.remove('entering'), { once: true });
     cell.appendChild(el);
