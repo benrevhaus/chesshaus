@@ -1,0 +1,234 @@
+/* ============================================================
+   Chess AI Sprint — Slide Deck Styles
+   ============================================================ */
+
+:root {
+  --bg:       #F6F1E8;
+  --green:    #1F4D3A;
+  --clay:     #B56A4A;
+  --charcoal: #2B2B2B;
+  --sq-light: #EDE4D3;
+  --sq-dark:  #C9BAA0;
+  --notes-bg: #f0ede5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Georgia', serif;
+  background: var(--bg);
+  color: var(--charcoal);
+}
+
+/* ── Layout ─────────────────────────────────────────────── */
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  min-height: 600px;
+}
+
+body.presenter #app {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#board-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 2rem;
+}
+
+#content-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 3rem 2rem;
+  border-left: 1px solid rgba(43,43,43,0.1);
+}
+
+/* ── Chessboard ─────────────────────────────────────────── */
+
+#chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 480px;
+  height: 480px;
+  border: 3px solid var(--charcoal);
+  box-shadow: 0 8px 32px rgba(43,43,43,0.18);
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.square.light { background: var(--sq-light); }
+.square.dark  { background: var(--sq-dark); }
+
+/* ── Pieces ─────────────────────────────────────────────── */
+
+.piece {
+  font-size: 2.4rem;
+  cursor: default;
+  color: var(--charcoal);
+  user-select: none;
+  position: relative;
+  line-height: 1;
+}
+
+/* Tooltip */
+.piece[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--charcoal);
+  color: #fff;
+  font-size: 0.7rem;
+  font-family: 'Georgia', serif;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 150ms ease;
+  z-index: 10;
+}
+
+.piece[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
+/* ── Slide Content ──────────────────────────────────────── */
+
+#slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 150ms ease;
+}
+
+#slide-content.fading {
+  opacity: 0;
+}
+
+h1#headline {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--charcoal);
+  margin-bottom: 1.4rem;
+}
+
+ul#bullets {
+  font-size: 1rem;
+  color: var(--charcoal);
+  opacity: 0.78;
+  line-height: 1.8;
+  padding-left: 1.2rem;
+}
+
+ul#bullets li {
+  margin-bottom: 0.3rem;
+}
+
+/* ── Speaker Notes ──────────────────────────────────────── */
+
+#speaker-notes {
+  display: none;
+  background: var(--notes-bg);
+  border-left: 3px solid var(--green);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 0 4px 4px 0;
+}
+
+body.notes-visible #speaker-notes,
+body.presenter #speaker-notes {
+  display: block;
+}
+
+#notes-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#notes-text {
+  font-size: 0.85rem;
+  color: var(--charcoal);
+  opacity: 0.8;
+  line-height: 1.65;
+}
+
+/* ── Progress ───────────────────────────────────────────── */
+
+#progress {
+  text-align: right;
+  font-size: 0.75rem;
+  color: var(--clay);
+  letter-spacing: 0.05em;
+}
+
+/* ── Presenter third column ─────────────────────────────── */
+
+/* In presenter mode, notes panel stays visible via body.presenter rule above */
+
+/* ── Animations ─────────────────────────────────────────── */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.piece.entering {
+  animation: fadeIn 300ms ease forwards;
+}
+
+/* ── Responsive safety ──────────────────────────────────── */
+
+@media (max-width: 900px) {
+  #app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  #chessboard {
+    width: 320px;
+    height: 320px;
+  }
+
+  .piece {
+    font-size: 1.6rem;
+  }
+
+  #content-panel {
+    padding: 2rem 1.5rem 1.5rem;
+    border-left: none;
+    border-top: 1px solid rgba(43,43,43,0.1);
+  }
+}
