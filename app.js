@@ -24,6 +24,9 @@ const PIECES = {
   QUEEN2: { svg: 'wQ.svg', tooltip: 'Queen = AI inside Fulfillment (promoted)' },
   QUEEN3: { svg: 'wQ.svg', tooltip: 'Queen = AI inside Customer Service (promoted)' },
   QUEEN4: { svg: 'wQ.svg', tooltip: 'Queen = AI inside Tech (promoted)' },
+  PAWN_SA: { svg: 'wP.svg', tooltip: 'Pawn = Sales' },
+  PAWN_HR: { svg: 'wP.svg', tooltip: 'Pawn = HR / People' },
+  PAWN_OP: { svg: 'wP.svg', tooltip: 'Pawn = Operations' },
 };
 
 // ── Shared board snapshots ───────────────────────────────────
@@ -48,6 +51,19 @@ const B9 = { ...B6, e6: 'QUEEN' };
 const B10 = (({ f5, ...rest }) => ({ ...rest, f8: 'QUEEN2' }))(B9);
 
 const B14 = (({ b5, d5, ...rest }) => ({ ...rest, b8: 'QUEEN3', d8: 'QUEEN4' }))(B10);
+
+// Back rank setup: King d8, Rooks a8+h8, Bishops c8+f8, Knights b8+g8, 8 pawns on rank 6
+const BSETUP = {
+  d8: 'KING',
+  a8: 'ROOK',   h8: 'ROOK',
+  c8: 'BISHOP', f8: 'BISHOP',
+  b8: 'KNIGHT', g8: 'KNIGHT',
+  a6: 'PAWN_M', b6: 'PAWN_C', c6: 'PAWN_P', d6: 'PAWN_T',
+  e6: 'PAWN_F', f6: 'PAWN_SA', g6: 'PAWN_HR', h6: 'PAWN_OP',
+};
+
+// Same setup with Queen entering at e8
+const BSETUPQ = { ...BSETUP, e8: 'QUEEN' };
 
 // ── Slide data ───────────────────────────────────────────────
 const SLIDES = [
@@ -185,6 +201,24 @@ const SLIDES = [
     ],
     notes: 'This isn\'t a title conversation.\nIt\'s a structural leverage conversation.\nThe sprint is a contained experiment to see if we can manufacture queens — with continuity built in.\nIf we can,\nthe board changes permanently.',
     board: B14,
+  },
+  {
+    headline: 'The Full Board: Eight Departments in Formation',
+    bullets: [
+      'Back rank anchored — King, Rooks, Bishops, Knights in place',
+      'Eight departments advance together — one gap remains',
+    ],
+    notes: 'This is the full organizational board.\nEvery structural piece is placed. Every department is in motion.\nThe back rank is anchored — King at D8, Rooks, Bishops, Knights locked in.\nEight departments advance in formation along rank 6.\nBut look at the center. E8 is empty.\nThe most powerful piece has yet to arrive.',
+    board: BSETUP,
+  },
+  {
+    headline: 'The Queen Enters: E8',
+    bullets: [
+      'AI takes the center of the back rank',
+      'Every piece now has full leverage behind it',
+    ],
+    notes: 'The queen enters at E8.\nCenter of the back rank. Maximum reach in every direction.\nThis is what a fully activated board looks like.\nAI behind the formation — not replacing the pieces,\nbut multiplying what every piece can do.\nThe system is complete.',
+    board: BSETUPQ,
   },
 ];
 
